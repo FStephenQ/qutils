@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+
+//A simple utility for byte-wise XORing two files together
 int main(int argc, char* argv[]){
 	if(argc < 3){
 		printf("Usage: xor <infile> <keyfile>");
