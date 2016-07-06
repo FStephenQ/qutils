@@ -2,7 +2,8 @@
 #include <stdlib.h>
 #include "hamming.h"
 
-//A very simple library of utilities related to calculating byte-level hamming weights
+//A very simple library of utilities related to calculating byte-level hamming 
+//Done in one of the least efficient manners possible
 
 int hamming_weight(char c){
 	int ret = 0;
@@ -33,9 +34,15 @@ int int_hamming_weight(int c){
 		ret += hamming_weight(tmp[i]);
 	}
 	return ret;
-}
-		
+}		
 
+//Calculate the hamming distance between two bytes
+int hamming_distance(char c1, char c2){
+	return hamming_weight(c1^c2);
+}
+
+
+//A set of test cases
 int main(int argc, char* argv[]){ 
 	if(sizeof(char) != 1){
 		printf("You have a strange char size: %d. I can't handle this\n",sizeof(char));
@@ -48,6 +55,9 @@ int main(int argc, char* argv[]){
 	printf("Weight of 0xFF: %d\n",hamming_weight(0xFF));
 	printf("Weight of \"Test\": %d\n",str_hamming_weight("Test"));
 	printf("Weight of 0x0101: %d\n",str_hamming_weight("\x01\x01"));
-	printf("Weight of 1000 %d\n",int_hamming_weight(1000));
+	printf("Weight of 1000: %d\n",int_hamming_weight(1000));
+	printf("Distance between 0x00 and 0x01: %d\n",hamming_distance(0x00,0x01));
+	printf("Distance between 0xFE and 0xFF: %d\n",hamming_distance(0xFE,0xFF));
+	printf("Distance between 0xCA and 0x4D: %d\n",hamming_distance(0xCA,0x4D));
 	exit(0);
 }
