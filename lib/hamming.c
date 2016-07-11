@@ -42,7 +42,7 @@ int hamming_distance(char c1, char c2){
 }
 
 
-//A set of test cases
+/*A set of test cases
 int main(int argc, char* argv[]){ 
 	if(sizeof(char) != 1){
 		printf("You have a strange char size: %d. I can't handle this\n",sizeof(char));
@@ -60,4 +60,4 @@ int main(int argc, char* argv[]){
 	printf("Distance between 0xFE and 0xFF: %d\n",hamming_distance(0xFE,0xFF));
 	printf("Distance between 0xCA and 0x4D: %d\n",hamming_distance(0xCA,0x4D));
 	exit(0);
-}
+}*/
