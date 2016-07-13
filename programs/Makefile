@@ -8,8 +8,12 @@ hamming.o:
 xor: 
 	gcc -o bin/xor xor.c
 
-binary_convert:
-	gcc -o bin/binary_convert binary_convert.c
+binary_convert: bin2ascii.o
+	gcc -o bin/binary_convert bin2ascii.o binary_convert.c
+	rm bin2ascii.o
+
+bin2ascii.o:
+	gcc -c ../lib/bin2ascii.c
 
 clean:
 	rm -f hamming.o bin/file_weight bin/xor bin/binary_convert
