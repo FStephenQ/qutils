@@ -12,6 +12,6 @@ binary_convert:
 	gcc -o bin/binary_convert binary_convert.c
 
 clean:
-	rm -f hamming.o bin/file_weight bin/xor
+	rm -f hamming.o bin/file_weight bin/xor bin/binary_convert
 
-all: file_weight xor
+all: file_weight xor binary_convert
