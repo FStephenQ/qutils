@@ -12,7 +12,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include "../lib/bin2ascii.h"
+#include "bin2ascii.h"
 
 
 int main(int argc, char* argv[]){ //usage definition

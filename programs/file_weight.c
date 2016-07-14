@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "../lib/hamming.h"
+#include "hamming.h"
 
 
 //A simple utility for finding the hamming weight of a file
