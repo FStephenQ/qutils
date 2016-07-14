@@ -36,6 +36,15 @@ int int_hamming_weight(int c){
 	return ret;
 }		
 
+long void_hamming_weight(void* c, int len){
+	int ret = 0;
+	char* tmp = (char*)c;
+	for(int i = 0; i < len; i++){
+		ret += hamming_weight(tmp[i]);
+	}
+	return ret;
+}
+
 //Calculate the hamming distance between two bytes
 int hamming_distance(char c1, char c2){
 	return hamming_weight(c1^c2);
@@ -48,6 +57,7 @@ int main(int argc, char* argv[]){
 		printf("You have a strange char size: %d. I can't handle this\n",sizeof(char));
 		exit(1);
 	}
+	float t = 10.10;
 	printf("Weight of 0x00: %d\n",hamming_weight(0));
 	printf("Weight of A: %d\n",hamming_weight('A'));
 	printf("Weight of b: %d\n",hamming_weight('b'));
@@ -56,6 +66,7 @@ int main(int argc, char* argv[]){
 	printf("Weight of \"Test\": %d\n",str_hamming_weight("Test"));
 	printf("Weight of 0x0101: %d\n",str_hamming_weight("\x01\x01"));
 	printf("Weight of 1000: %d\n",int_hamming_weight(1000));
+	printf("Weight of 10.10: %d\n",void_hamming_weight(&t,sizeof(float)));
 	printf("Distance between 0x00 and 0x01: %d\n",hamming_distance(0x00,0x01));
 	printf("Distance between 0xFE and 0xFF: %d\n",hamming_distance(0xFE,0xFF));
 	printf("Distance between 0xCA and 0x4D: %d\n",hamming_distance(0xCA,0x4D));

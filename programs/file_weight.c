@@ -22,4 +22,5 @@ int main(int argc, char* argv[]){
 		total += hamming_weight(in);
 	}
 	printf("%lld\n",total);
+	printf("%ld\n",void_hamming_weight((&total),sizeof(long long)));
 }

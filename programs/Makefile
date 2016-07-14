@@ -1,3 +1,5 @@
+PWD := $(shell echo $(PWD))
+
 file_weight: file_weight.c hamming.o
 	gcc -iquote ../lib/C -o bin/file_weight file_weight.c hamming.o -std=c99
 	rm hamming.o
@@ -19,3 +21,7 @@ clean:
 	rm -f hamming.o bin2ascii.o bin/file_weight bin/xor bin/binary_convert
 
 all: file_weight xor binary_convert
+
+install: all
+	@echo $(PWD)
+	ln -s $(PWD)/bin/* /usr/bin/ 
