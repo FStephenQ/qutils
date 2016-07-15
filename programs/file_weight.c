@@ -15,12 +15,12 @@ int main(int argc, char* argv[]){
 	}
 	long long total = 0l;
 	while(1){
-		char in = fgetc(input);
+		int in = fgetc(input);
 		if(in == EOF){
 			break;
 		}
 		total += hamming_weight(in);
 	}
-	printf("%lld\n",total);
-	printf("%ld\n",void_hamming_weight((&total),sizeof(long long)));
+	printf("%lld",total);
+	//printf("%ld\n",void_hamming_weight((&total),sizeof(long long)));
 }

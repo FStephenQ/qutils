@@ -24,11 +24,11 @@ int main(int argc, char* argv[]){
 		exit(1);
 	}
 	while(1){
-		char in = fgetc(input);
+		int in = fgetc(input);
 		if(in == EOF){
 			exit(0);
 		}
-		char key = fgetc(keyfile);
+		int key = fgetc(keyfile);
 		if(key == EOF){
 			fclose(keyfile);
 			keyfile = fopen(argv[2],"rb");
