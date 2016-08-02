@@ -17,10 +17,13 @@ binary_convert: bin2ascii.o
 bin2ascii.o:
 	gcc -c ../lib/C/bin2ascii.c
 
-clean:
-	rm -f hamming.o bin2ascii.o bin/file_weight bin/xor bin/binary_convert
+invert:
+	gcc -o bin/invert invert.c
 
-all: file_weight xor binary_convert
+clean:
+	rm -f hamming.o bin2ascii.o bin/file_weight bin/xor bin/binary_convert bin/invert
+
+all: file_weight xor binary_convert invert
 
 install: all
 	@echo $(PWD)
