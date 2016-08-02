@@ -11,7 +11,9 @@ hamming: A set of utility functions for calculating hamming weights
 bin2ascii: A simple library for converting binary data to strings of ASCII 1's and 0's, and vice-versa. Considered silly
 
 #Programs:
-xor: XOR's its two arguments together, character-by-character, and outputs the result to stdout
+xor: XOR's the two provided files together, character-by-character, and outputs the result to stdout
+
+invert: Bytewise invert (i.e. XOR with 0xFF) a provided file or stdin, and output the result to stdout
 
 binary_convert: Thin client for bin2ascii library
 
