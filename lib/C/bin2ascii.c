@@ -61,8 +61,8 @@ void ascii2bin(FILE *input,FILE *output){
 		int x = fgetc(input);
 		if(x == EOF) break;
 		holder <<= 1;
-		if(x == '1'){
-			holder = holder | 1; //bitwise opperations are *fun*.
+		if(x >= '1'){
+			holder = holder | 0x01; //bitwise opperations are *fun*.
 		}
 		num++;
 		if(num%8 == 0){

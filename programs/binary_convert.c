@@ -7,7 +7,6 @@
  * 
  * A trivial problem, but a fun one to mess around with.
  *
- * No Rights Reserved
  ***********************/
 
 #include <stdio.h>
