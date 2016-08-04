@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 
-//A simple utility for byte-wise XORing two files together
+//A simple utility for byte-wise inverting the input file
 int main(int argc, char* argv[]){
 	if(argc < 2){
 		printf("Usage: invert <infile>");

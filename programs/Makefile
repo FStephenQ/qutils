@@ -20,8 +20,11 @@ bin2ascii.o:
 invert:
 	gcc -o bin/invert invert.c
 
+explode:
+	gcc -o bin/explode explode.c
+
 clean:
-	rm -f hamming.o bin2ascii.o bin/file_weight bin/xor bin/binary_convert bin/invert
+	rm -f hamming.o bin2ascii.o bin/file_weight bin/xor bin/binary_convert bin/invert bin/explode
 
 all: file_weight xor binary_convert invert
 
